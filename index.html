@@ -1,9 +1,16 @@
 <html>
     <head>Test</head>
     <script>
-        window.location.replace("ConciergeKey://token=123&onboarding=false");
-        setTimeout(function () {
-          window.location.replace("https://itunes.apple.com/app/id1290658620?mt=8");
-        }, 2000);
+        window.location = "ConciergeKey://token=123&onboarding=false";
+    
+        setTimeout(function() {
+    
+            // If the user is still here, open the App Store
+            if (!document.webkitHidden) {
+    
+                // Replace the Apple ID following '/id'
+                window.location = 'https://itunes.apple.com/app/id1290658620?mt=8';
+            }
+        }, 25);
         </script>        
 </html>
